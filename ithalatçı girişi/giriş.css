@@ -1,0 +1,312 @@
+/* Genel Stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F1F0E8;
+    color: #89A8B2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #89A8B2;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+/* Menü Stilleri */
+nav {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    background-color: #B3C8CF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+.menu-checkbox:checked + nav {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #E5E1DA;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F1F0E8;
+    font-weight: bold;
+    display: block;
+}
+
+/* Alt Menü Stilleri */
+.submenu-checkbox {
+    display: none;
+}
+
+nav ul li ul {
+    display: none;
+    padding-left: 20px;
+    background-color: #E5E1DA;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+nav ul li ul li {
+    padding: 8px 15px;
+}
+
+nav ul li ul li a {
+    color: #89A8B2;
+    font-weight: normal;
+}
+
+.submenu-checkbox:checked + ul {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Ana Sayfa */
+main {
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    background: url('../fotolar/tknofoto.jpg'); /* Arka plan deseni */
+    background-size: cover;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #F1F0E8;
+}
+
+.hero-title {
+    font-size: 48px;
+    color: #e4edf0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero-slogan {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+/* Hero kısmının altındaki yazının arka planda görünümesi için daha şık bir tasarım */
+.hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Hafif koyuluk ekler */
+    border-radius: 12px;
+    z-index: -1; /* Arka planda kalması için */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Üst Karşılama Alanı */
+.welcome-header {
+    text-align: center;
+    background-color: #89A8B2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.welcome-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.welcome-header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Hızlı Bilgi Alanı */
+.quick-info {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.info-box {
+    flex: 1;
+    background-color: #B3C8CF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #146C94;
+}
+
+.info-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hızlı İşlemler */
+.quick-actions {
+    background-color: #E5E1DA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quick-actions h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #146C94;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions button {
+    padding: 10px 20px;
+    background-color: #19A7CE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #146C94;
+}
+
+/* Grafikler */
+.charts {
+    background-color: #F6F1F1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box {
+    background-color: #DDE4E5;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Bildirimler */
+.notifications {
+    background-color: #E5E1DA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notifications h2 {
+    font-size: 1.5rem;
+    color: #146C94;
+    margin-bottom: 10px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notifications li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.notifications a {
+    text-decoration: none;
+    color: #19A7CE;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.notifications a:hover {
+    color: #146C94;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #B3C8CF;
+    color: white;
+    border-radius: 5px;
+}

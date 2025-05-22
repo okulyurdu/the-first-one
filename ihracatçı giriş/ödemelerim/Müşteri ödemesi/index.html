@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İşler Tablosu</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <section class="work-in-progress">
+        <h2>Devam Eden İşler</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tarih</th>
+                    <th>Şirket</th>
+                    <th>Ürünler</th>
+                    <th>Gideceği Ülke</th>
+                    <th>Durum</th>
+                    <th>Ödeme Detayı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>10/01/2025</td>
+                    <td>Şirket B</td>
+                    <td>Gömlek, Araba Lastiği</td>
+                    <td>Fransa</td>
+                    <td>Devam Ediyor</td>
+                    <td><button class="detail-btn" onclick="toggleDetail(2)">Ödeme</button></td>
+                </tr>
+                <tr class="detail-row" id="detail-2">
+                    <td colspan="7">
+                        <div class="detail-content">
+                            <h2>İhracat Detayları</h2>
+                            <p><strong>Ürün Adı:</strong> Gömlek, Araba Lastiği</p>
+                            <p><strong>GTİP:</strong> 6205.20.00, 4011.10.00</p>
+                            <p><strong>İstene Miktar:</strong> 5 MT</p>
+                            <p><strong>Teslimat Ülkesi:</strong> Fransa</p>
+                            <p><strong>Teslimat Limanı:</strong> Le Havre Limanı</p>
+                            <p><strong>Teslimat Yöntemi:</strong> CFR</p>
+                            <p><strong>Durum:</strong> İhracat Limanında</p>
+                            <h2>Ödeme</h2>
+                            <p><strong>Ödeme Yöntemi:</strong> Havale %30 önce, 
+                                %70 Evraklar karşılığında</p>
+                            <p><strong>Toplam Maliyet:</strong> 75.000 USD</p>
+                            <p><strong>Alınan Ödeme:</strong> 22.500 USD</p>
+                            <p><strong>Kalan Ödeme:</strong> 52.500 USD</p>
+                            <p><strong>Ödemenin Yapıldığı Banka:</strong> Bank de France</p>
+                            <p><strong>Ödemenin Yattığı Hesap:</strong> Taydum Holding</p>
+                            <h2>Giderler</h2>
+                            <h3>Gümrük Giderleri</h3>
+                            <p><strong> Çıkış vergileri:</strong> 5.000 USD</p>
+                            <p><strong> Gümrük Masrafları:</strong> 2.000 USD</p>
+                            <h3>Lojistik Giderleri</h3>
+                            <p><strong> Sigorta:</strong> 0.000 USD</p>
+                            <p><strong> Navlun:</strong> 7.000 USD</p>
+                            <p><strong> Karayolu Masrafları:</strong> 1.000 USD</p>
+                            <h3>Komisyon: 3.750 USD</h3>
+                            <h3><strong> Toplam Giderler:</strong> 18.750 USD</h3>
+
+                        <h2>Vergisiz yatacak miktar</h2>
+                        <strong> 56.250 USD</strong>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Diğer satırlar burada olacak -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="work-completion">
+        <h2>Biten İşler</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tarih</th>
+                    <th>Şirket</th>
+                    <th>Ürünler</th>
+                    <th>Gideceği Ülke</th>
+                    <th>Durum</th>
+                    <th>Ödeme Detay</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>01/01/2025</td>
+                    <td>Şirket A</td>
+                    <td>Makarna, Dökme Demir</td>
+                    <td>Almanya</td>
+                    <td>Tamamlandı</td>
+                    <td><button class="detail-btn" onclick="toggleDetail(1)">Ödeme</button></td>
+                </tr>
+                <tr class="detail-row" id="detail-1">
+                    <td colspan="7">
+                        <div class="detail-content">
+                            <h2>İhracat Detayları</h2>
+                            <p><strong>Ürün Adı:</strong> Dökme Demir</p>
+                            <p><strong>GTİP:</strong> 7207.11.00</p>
+                            <p><strong>İstene Miktar:</strong> 5 MT</p>
+                            <p><strong>Teslimat Ülkesi:</strong> Almanya</p>
+                            <p><strong>Teslimat Limanı:</strong> Hamburg Limanı</p>
+                            <p><strong>Teslimat Yöntemi:</strong> CIF</p>
+                            <p><strong>Durum:</strong> Teslim Edildi</p>
+                            <h2>Ödeme</h2>
+                            <p><strong>Ödeme Yöntemi:</strong> Akreditasyon %30 önce, 
+                                %70 Evraklar karşılığında</p>
+                            <p><strong>Toplam Maliyet:</strong> 75.000 USD</p>
+                            <p><strong>Alınan Ödeme:</strong> 75.000 USD</p>
+                            <p><strong>Kalan Ödeme:</strong> 0.000 USD</p>
+                            <p><strong>Ödemenin Yapıldığı Banka:</strong> Bankingun Dutgh</p>
+                            <p><strong>Ödemenin Yattığı Hesap:</strong> Taydum Holding</p>
+                            <h2>Giderler</h2>
+                            <h3>Gümrük Giderleri</h3>
+                            <p><strong> Çıkış vergileri:</strong> 5.000 USD</p>
+                            <p><strong> Gümrük Masrafları:</strong> 2.000 USD</p>
+                            <h3>Lojistik Giderleri</h3>
+                            <p><strong> Sigorta:</strong> 3.000 USD</p>
+                            <p><strong> Navlun:</strong> 7.000 USD</p>
+                            <p><strong> Karayolu Masrafları:</strong> 1.000 USD</p>
+                            <h3>Komisyon: 3.750 USD</h3>
+                            <h3><strong> Toplam Giderler:</strong> 21.750 USD</h3>
+                            
+
+                        <h2>Vergisiz yatacak miktar</h2>
+                        <strong> 53.250 USD</strong>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Diğer satırlar burada olacak -->
+            </tbody>
+        </table>
+    </section>
+
+   
+    <script>
+        function toggleDetail(id) {
+            const detailRow = document.getElementById('detail-' + id);
+            // Toggle visibility of the detail row
+            if (detailRow.style.display === 'none' || detailRow.style.display === '') {
+                detailRow.style.display = 'table-row';
+            } else {
+                detailRow.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

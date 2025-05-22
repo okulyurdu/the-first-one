@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #E5E1DA, #F1F0E8);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #146C94;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F1F0E8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #B3C8CF;
+  }
+  
+  th {
+    background-color: #89A8B2;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  td {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  tr:hover {
+    background-color: #B3C8CF;
+    cursor: pointer;
+  }
+  
+  /* Buton Tasarımı */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #19A7CE;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: #146C94;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  /* Footer Tasarımı */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #89A8B2;
+    color: #fff;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .detail-row{
+    display: none;
+  }

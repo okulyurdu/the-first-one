@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müşterilerim</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Müşterilerim</h1>
+    <p>Burada tüm müşterilerinizin bilgilerini görüntüleyebilir ve detaylara ulaşabilirsiniz.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Şirket</th>
+          <th>Durum</th>
+          <th>Detay</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>ABC Gıda</td>
+          <td>İrtibata Geçilmiş</td>
+          <td><button onclick="openModal(1)">Detay</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>XYZ İnşaat</td>
+          <td>teklif gönderildi</td>
+          <td><button onclick="openModal(2)">Detay</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ModaTekstil</td>
+          <td>-----</td>
+          <td><button onclick="openModal(3)">Detay</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button onclick="openAnalysisForm()">Müşteri Analizi</button>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Yapılan İşler</h2>
+        <p><strong>İstenen Ürünler:</strong> 5 ton makarna</p>
+        <p><strong>Tarih:</strong> 01/01/2025</p>
+        <p><strong>Teslimat Yöntemi:</strong> Kara Yolu</p>
+        <p><strong>Ödeme Yöntemi:</strong> Havale</p>
+        <p><strong>Son Durum:</strong> Yolda</p>
+        <button>Gümrük</button>
+        <button>Lojistik</button>
+      </div>
+    </div>
+
+    <!-- Analysis Form -->
+    <div id="analysis-form" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Müşteri Analizi</h2>
+        <div class="form-group">
+          <label for="customer">Müşteri Seç</label>
+          <select id="customer">
+            <option value="1">ABC Gıda</option>
+            <option value="2">XYZ İnşaat</option>
+            <option value="3">ModaTekstil</option>
+          </select>
+        </div>
+        <div class="form-buttons">
+          <button>Analizi Başlat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(customerId) {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('analysis-form').style.display = 'none';
+    }
+
+    function openAnalysisForm() {
+      document.getElementById('analysis-form').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

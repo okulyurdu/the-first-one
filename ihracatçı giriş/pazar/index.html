@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Analizi</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ürün Analizi</h1>
+
+        <!-- Ürün Tablosu -->
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Ürün Adı</th>
+                    <th>GTİP</th>
+                    <th>Kullanıldığı Sektörler</th>
+                    <th>Analiz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Makarna</td>
+                    <td>1902.11.00</td>
+                    <td>Gıda sektörü</td>
+                    <td><a href="#" class="btn">Analiz</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dökme Demir</td>
+                    <td>7207.11.00</td>
+                    <td>İnşaat, otomotiv, sanayi</td>
+                    <td><a href="#" class="btn">Analiz</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Gömlek</td>
+                    <td>6205.20.00</td>
+                    <td>Moda, tekstil</td>
+                    <td><a href="#" class="btn">Analiz</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Porselen Tabak</td>
+                    <td>6911.10.00</td>
+                    <td>Ev eşyaları, mutfak gereçleri</td>
+                    <td><a href="#" class="btn">Analiz</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Araba Lastiği</td>
+                    <td>4011.10.00</td>
+                    <td>Otomotiv sektörü</td>
+                    <td><a href="#" class="btn">Analiz</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Ürün Analizi Butonu -->
+        <a href="#" class="btn" id="urunAnaliziBtn">Ürün Analizi</a>
+
+        <!-- Form Alanı -->
+        <div class="form-container" id="formContainer">
+            <label for="ulke">Ülke</label>
+            <input type="text" id="ulke" name="ulke" placeholder="Ülke giriniz...">
+
+            <label for="gtip">GTİP</label>
+            <input type="text" id="gtip" name="gtip" placeholder="GTİP kodu giriniz...">
+
+            <button class="btn">Analiz</button>
+        </div>
+    </div>
+
+    <div class="pazar-analizi">
+        <h2>Pazar Analizi</h2>
+        <p>Hedef ülke analizi için aşağıdaki butona tıklayın ve detaylı analiz raporuna ulaşın.</p>
+        <button class="btn" id="open-form">Hedef Ülke Analizi</button>
+    
+        <!-- Gizli Form -->
+        <div class="analysis-form" id="analysis-form" style="display: none;">
+            <form action="#">
+                <label for="country-select">Ülke Seç:</label>
+                <select id="country-select" required>
+                    <option value="" disabled selected>Bir ülke seçin</option>
+                    <option value="turkey">Türkiye</option>
+                    <option value="germany">Almanya</option>
+                    <option value="usa">Amerika Birleşik Devletleri</option>
+                    <option value="china">Çin</option>
+                </select>
+                <button type="submit" class="btn">Analizi Başlat</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="customer-search">
+        <h2>Müşteri Arama Motoru</h2>
+        <p>Sizlere en uygun ve en değerli müşterileri bulmak hiç bu kadar kolay olmamıştı. Müşteri Arama Motoru sayesinde, sektörünüzdeki potansiyel müşterilere hızla ulaşabilir, işinizi büyütmek için en iyi fırsatları keşfedebilirsiniz.</p>
+        
+        <!-- Müşteri Arama Butonu -->
+        <button id="search-btn">Müşteri Ara</button>
+      
+        <!-- Arama Formu -->
+        <div id="search-form" class="form-container">
+          <form action="#" method="GET">
+            <div class="form-group">
+              <label for="gtip">GTİP:</label>
+              <input type="text" id="gtip" name="gtip" placeholder="GTİP girin">
+            </div>
+            <div class="form-group">
+              <label for="sector">Sektör:</label>
+              <input type="text" id="sector" name="sector" placeholder="Sektör girin">
+            </div>
+            <div class="form-group">
+              <label for="country">Ülke:</label>
+              <input type="text" id="country" name="country" placeholder="Ülke girin">
+            </div>
+            <button type="submit">Ara</button>
+          </form>
+        </div>
+      </section>
+    <script>
+        const urunAnaliziBtn = document.getElementById('urunAnaliziBtn');
+        const formContainer = document.getElementById('formContainer');
+
+        urunAnaliziBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            formContainer.style.display = formContainer.style.display === 'none' || formContainer.style.display === '' ? 'block' : 'none';
+        });
+
+        document.getElementById("search-btn").addEventListener("click", function() {
+        var form = document.getElementById("search-form");
+        if (form.style.display === "none" || form.style.display === "") {
+            form.style.display = "block";
+         } else {
+           form.style.display = "none";
+         }
+        });
+
+        document.getElementById("open-form").addEventListener("click", function () {
+         const form = document.getElementById("analysis-form");
+         if (form.style.display === "none") {
+        form.style.display = "block";
+        } else {
+        form.style.display = "none";
+        }
+        });
+    </script>
+</body>
+</html>

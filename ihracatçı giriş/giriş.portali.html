@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Portalı</title>
+    <link rel="stylesheet" href="./giriş.portali.css">
+</head>
+<body>
+    <header>
+        <h1>Teknoloji Şirketi Portalı</h1>
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <nav id="side-menu">
+            <ul>
+                <li>
+                    <a href="#">Ana Sayfa</a>
+                </li>
+                <li>
+                    <a href="./hesabım/index.html">Profilim</a>
+                </li>
+                <li>
+                    <label for="export-submenu">İhracatım</label>
+                    <input type="checkbox" id="export-submenu" class="submenu-checkbox">
+                    <ul>
+                        <li><a href="./ihracatım/ürünlerim.html">Ürünlerim</a></li>
+                        <li><a href="./ihracatım/mşterilerim/index.html">Müşterilerim</a></li>
+                        <li><a href="./ihracatım/gümrük ve lojistik/index.html">Gümrük ve Lojistik</a></li>
+                        <li><a href="./ihracatım/evraklar/index.html">Evraklar</a></li>
+                        <li><a href="./ihracatım/işler/index.html">Yapılan İşler</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./pazar/index.html"><label for="market-submenu">Pazar</label></a>
+                    <input type="checkbox" id="market-submenu" class="submenu-checkbox">
+                    
+                </li>
+                <li>
+                     <a href="./ödemelerim/Müşteri ödemesi/index.html"><label for="payments-submenu">Ödemeler</label></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <!-- Üst Karşılama Alanı -->
+            <header class="welcome-header">
+                <h1>Hoş Geldiniz</h1>
+                <p>Hedeflerinizi gerçekleştirmek için doğru yerdesiniz!</p>
+            </header>
+    
+            <!-- Dashboard Bölgesi -->
+            <main class="dashboard">
+                <section class="quick-info">
+                    <div class="info-box">
+                        <h3>Toplam İhracat</h3>
+                        <p>₺2,450,000</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Son Analiz</h3>
+                        <p>Almanya - Hazır Giyim</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Bekleyen Ödemeler</h3>
+                        <p>₺120,000</p>
+                    </div>
+                </section>
+    
+                <!-- Hızlı İşlemler -->
+                <section class="quick-actions">
+                    <h2>Hızlı İşlemler</h2>
+                    <div class="actions">
+                        <button>Yeni Ürün Ekle</button>
+                        <button>Analiz Başlat</button>
+                        <button>Rapor İndir</button>
+                    </div>
+                </section>
+    
+                <!-- Grafikler ve Trendler -->
+                <section class="charts">
+                    <h2>Pazar Performansı</h2>
+                    <div class="chart-box">
+                        <p>Grafik alanı (örn. ihracat trendleri, pazar payı)</p>
+                    </div>
+                </section>
+    
+                <!-- Bildirimler -->
+                <section class="notifications">
+                    <h2>Bildirimler</h2>
+                    <ul>
+                        <li>Yeni analiz raporunuz hazır! <a href="#">İndir</a></li>
+                        <li>Son ödemenizi gerçekleştirmediniz. <a href="#">Öde</a></li>
+                    </ul>
+                </section>
+            </main>
+    
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2025 Cheetah Teknoloji. Tüm hakları saklıdır.</p>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>

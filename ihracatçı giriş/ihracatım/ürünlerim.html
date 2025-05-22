@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünlerim</title>
+    <link rel="stylesheet" href="./ürünler.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ürünlerim</h1>
+            <p>Ürünlerinizi kolayca yönetin ve müşterilerinize sergileyin!</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Ürün Adı</th>
+                    <th>GTİP</th>
+                    <th>Kullanıldığı Sektörler</th>
+                    <th>Üretim Süresi</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Makarna</td>
+                      <td>1902.11.00</td>
+                      <td>Gıda sektörü</td>
+                      <td>2-3 gün</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Dökme Demir</td>
+                      <td>7207.11.00</td>
+                      <td>İnşaat, otomotiv, sanayi</td>
+                      <td>1-2 hafta</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Gömlek</td>
+                      <td>6205.20.00</td>
+                      <td>Moda, tekstil</td>
+                      <td>1-2 gün</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Porselen Tabak</td>
+                      <td>6911.10.00</td>
+                      <td>Ev eşyaları, mutfak gereçleri</td>
+                      <td>5-7 gün</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Araba Lastiği</td>
+                      <td>4011.10.00</td>
+                      <td>Otomotiv sektörü</td>
+                      <td>1-2 hafta</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+
+        <a href="#" class="add-product" onclick="openForm()">Ürün Ekle</a>
+    </div>
+
+    <div class="form-overlay" id="formOverlay">
+        <div class="form-container">
+            <h2>Yeni Ürün Ekle</h2>
+            <form>
+                <label for="productName">Ürün Adı</label>
+                <input type="text" id="productName" required>
+
+                <label for="gtip">GTİP</label>
+                <input type="text" id="gtip" required>
+
+                <label for="sectors">Kullanıldığı Sektörler</label>
+                <input type="text" id="sectors" required>
+
+                <label for="productionTime">Üretim Süresi</label>
+                <input type="text" id="productionTime" required>
+
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById('formOverlay').style.display = 'flex';
+        }
+
+        function closeForm() {
+            document.getElementById('formOverlay').style.display = 'none';
+        }
+
+        // Form submit işlemini buraya ekleyebilirsiniz
+    </script>
+</body>
+</html>

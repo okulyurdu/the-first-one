@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1F0E8; /* Daha yumuşak bir arka plan rengi */
+    margin: 0;
+    padding: 0;
+}
+
+.profile-section {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+}
+
+h1 {
+    text-align: center;
+    color: #146C94; /* Ana başlık için güçlü bir renk */
+}
+
+h2 {
+    color: #19A7CE; /* Alt başlıklar için daha canlı bir mavi */
+    font-size: 1.3rem;
+}
+
+.profile-info, .export-info, .financial-info, .logistics-info {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #E5E1DA; /* Bilgiler için daha hafif bir arka plan rengi */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info p, .export-info p, .financial-info p, .logistics-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333; /* Daha okunabilir metin rengi */
+}
+
+button.edit-btn {
+    background-color: #19A7CE; /* Buton için enerjik bir renk */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Butonun üzerine gelince renk değişimi */
+}
+
+button.edit-btn:hover {
+    background-color: #146C94; /* Hover efektiyle daha koyu bir renk */
+}
+
+button.edit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(20, 108, 148, 0.6); /* Buton odaklandığında gölge efekti */
+}

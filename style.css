@@ -1,0 +1,277 @@
+/* Genel Stil */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E5E1DA;
+    color: #333;
+}
+
+/* Header Stil */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #89A8B2;
+    color: white;
+    padding: 10px;
+}
+
+header .logo img {
+    width: 100px;
+    border-radius: 40%;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 20px 20px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+
+.auth-buttons .button {
+    background-color: #B3C8CF;
+    padding: 10px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Hero Bölümü */
+.hero {
+    background: url('./fotolar/anasayfa.webp') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    background-color: #272935;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background-color: #F1F0E8;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Fotoğraf Galerisi Bölümü */
+.photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.photo-block {
+    width: 23%;
+    height: 200px;
+    background-color: #B3C8CF;
+    border-radius: 8px;
+}
+
+/* Hakkımızda Bölümü */
+.about {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #89A8B2;
+}
+
+/* Ürünler Bölümü */
+.products {
+    background-color: #F1F0E8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #89A8B2;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    color: #89A8B2;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* İletişim Bölümü */
+.contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #89A8B2;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #B3C8CF;
+    padding: 10px 20px;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer Bölümü */
+footer {
+    background-color: #89A8B2;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-icon {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+    }
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-button {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+#hakkimizda {
+    background-color: #F1F0E8;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Başlık Tasarımı */
+.nedenbiz {
+    font-size: 32px;
+    color: #146C94;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Kutu Tasarımı */
+#hakkimizda ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Her bir madde */
+.sebep {
+    background: linear-gradient(145deg, #19A7CE, #146C94);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Efekti */
+.sebep:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.25);
+    background: linear-gradient(145deg, #146C94, #19A7CE);
+}
+
+/* Başlık stilinde ekstra ayar */
+.sebep strong {
+    font-size: 18px;
+    color: #F1F0E8;
+    font-weight: bold;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    #hakkimizda ul {
+        grid-template-columns: 1fr;
+    }
+}

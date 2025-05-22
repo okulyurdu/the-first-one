@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="./kayıt.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-form">
+            <h1>Kayıt Ol</h1>
+            <p>Yeni bir hesap oluşturmak için lütfen bilgilerinizi girin.</p>
+            <form action="#">
+                <input type="text" placeholder="İsim" required>
+                <input type="text" placeholder="Soyisim" required>
+                <input type="text" placeholder="Pasaport No" required>
+                <select required>
+                    <option value="" disabled selected>Ülkenizi Seçin</option>
+                    <option value="Türkiye">Türkiye</option>
+                    <option value="ABD">ABD</option>
+                    <option value="Almanya">Almanya</option>
+                    <option value="Diğer">Diğer</option>
+                </select>
+               
+                <input type="email" placeholder="E-posta Adresiniz" required>
+                <input type="password" placeholder="Şifre" required>
+                <button type="submit">Kayıt Ol</button>
+            </form>
+            <div class="links">
+                <a href="./Giriş.html">Zaten hesabınız var mı? Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
